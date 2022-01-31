@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+
+  <script>
+    function Human(name,age) {
+      this.name = name;
+      this.age = age;
+      this.say = function () {
+        document.write(`Меня зовут ${this.name}, мне ${this.age} лет`+ "<br>")
+      };
+    };
+
+    Human.getAdmin = function () {
+      return new Human("Boss", 58)
+    };
+
+    var hum1 = new Human("Johny", 29);
+    var hum2 = new Human("Tyler", 14);
+    var hum3 = new Human("Endy", 85);
+    var hum4 = new Human("Hloey", 66);
+
+    hum2.say();
+
+    Human.getAdmin().say();
+  </script>
+
+</body>
+</html>
